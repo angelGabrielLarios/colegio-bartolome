@@ -34,7 +34,7 @@ export const Navbar = () => {
 
           <a className="text-xl btn btn-ghost" href="/">
             <img
-              src="/public/images/logo_bartolome_de_medina-bg.webp"
+              src="/images/logo_bartolome_de_medina-bg.webp"
               alt="logo de colegio bartolome de medina "
               className="block w-14"
             />

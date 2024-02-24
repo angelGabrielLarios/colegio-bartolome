@@ -25,7 +25,7 @@ export const Footer = () => {
 
           </nav>
           <img
-            src="/public/images/logo_bartolome_de_medina-bg.webp"
+            src="/images/logo_bartolome_de_medina-bg.webp"
             alt=""
             className="block w-12 mx-auto sm:w-16 md:w-24"
           />

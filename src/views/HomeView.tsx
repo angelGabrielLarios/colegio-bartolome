@@ -20,12 +20,12 @@ export const HomeView = () => {
 
 
     const photos: SlideImage[] = [
-        { src: "/public/images/children_1.jpeg" },
-        { src: "/public/images/children_2.jpg" },
-        { src: "/public/images/children_3.jpg" },
-        { src: "/public/images/children_4.jpg" },
-        { src: "/public/images/children_5.jpeg" },
-        { src: "/public/images/children_6.jpeg" },
+        { src: "/images/children_1.jpeg" },
+        { src: "/images/children_2.jpg" },
+        { src: "/images/children_3.jpg" },
+        { src: "/images/children_4.jpg" },
+        { src: "/images/children_5.jpeg" },
+        { src: "/images/children_6.jpeg" },
     ];
 
 
@@ -38,7 +38,7 @@ export const HomeView = () => {
 
 
                     <img
-                        src="/public/images/logo_bartolome_de_medina-bg.webp"
+                        src="/images/logo_bartolome_de_medina-bg.webp"
                         alt="logo del Colegio Bartolomé de Medina"
                         className="block mx-auto animate-fade-right animate-duration-[2000ms]  w-20 md:w-[10rem]"
                     />
@@ -85,7 +85,7 @@ export const HomeView = () => {
                         transition={{ duration: 1, ease: 'easeIn' }}
                     >
                         <img
-                            src="/public/images/escuela_1.jpg"
+                            src="/images/escuela_1.jpg"
                             alt="escuela"
                             className="block rounded-3xl"
                         />
