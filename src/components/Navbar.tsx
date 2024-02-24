@@ -8,7 +8,7 @@ export const Navbar = () => {
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </div>
 
 
@@ -17,7 +17,10 @@ export const Navbar = () => {
                 {navLinks.map(navlink => {
                   return (
                     <li>
-                      <a href={navlink.id}>
+                      <a
+                        href={navlink.id}
+                        className=""
+                      >
                         {navlink.title}
                       </a>
                     </li>
@@ -29,7 +32,7 @@ export const Navbar = () => {
             </ul>
           </div>
 
-          <a className="btn btn-ghost text-xl" href="/">
+          <a className="text-xl btn btn-ghost" href="/">
             <img
               src="/public/images/logo_bartolome_de_medina-bg.webp"
               alt="logo de colegio bartolome de medina "
@@ -40,14 +43,17 @@ export const Navbar = () => {
         </div>
 
         {/* desktop */}
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+        <div className="hidden navbar-center lg:flex">
+          <ul className="px-1 menu menu-horizontal">
             {navLinks.map(navlink => {
               return (
                 <li
                   key={navlink.title}
                 >
-                  <a href={navlink.id}>
+                  <a
+                    href={navlink.id}
+                    className=""
+                  >
                     {navlink.title}
                   </a>
                 </li>

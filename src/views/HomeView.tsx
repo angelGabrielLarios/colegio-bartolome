@@ -34,7 +34,7 @@ export const HomeView = () => {
             <main id="home" className={`section min-h-screen`}>
 
 
-                <article className="text-center space-y-5">
+                <article className="space-y-5 text-center">
 
 
                     <img
@@ -68,7 +68,7 @@ export const HomeView = () => {
                     transition={{ duration: 1, ease: 'easeIn' }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-navy  text-center mb-10">
+                    <h2 className="mb-10 text-center text-navy">
                         Sobre Nosotros
                     </h2>
 
@@ -77,7 +77,7 @@ export const HomeView = () => {
 
 
 
-                <article className="grid grid-cols-1 lg:grid-cols-2 gap-4 content-center justify-center items-center">
+                <article className="grid items-center content-center justify-center grid-cols-1 gap-4 lg:grid-cols-2">
 
                     <motion.div
                         initial={{ opacity: 0, }}
@@ -98,11 +98,11 @@ export const HomeView = () => {
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 1, ease: 'easeIn' }}
                         >
-                            <article className="join join-vertical w-full">
+                            <article className="w-full join join-vertical">
 
-                                <article className="collapse collapse-arrow join-item bg-white">
+                                <article className="bg-white collapse collapse-arrow join-item">
                                     <input type="radio" name="my-accordion-4" />
-                                    <div className="collapse-title text-xl font-medium text-blueCustom">
+                                    <div className="text-xl font-medium collapse-title text-blueCustom">
                                         Misión
                                     </div>
                                     <div className="collapse-content">
@@ -112,9 +112,9 @@ export const HomeView = () => {
                                     </div>
                                 </article>
 
-                                <article className="collapse collapse-arrow join-item bg-white">
+                                <article className="bg-white collapse collapse-arrow join-item">
                                     <input type="radio" name="my-accordion-4" />
-                                    <div className="collapse-title text-xl font-medium text-blueCustom">
+                                    <div className="text-xl font-medium collapse-title text-blueCustom">
                                         Visión
                                     </div>
                                     <div className="collapse-content">
@@ -125,9 +125,9 @@ export const HomeView = () => {
                                     </div>
                                 </article>
 
-                                <article className="collapse collapse-arrow join-item bg-white">
+                                <article className="bg-white collapse collapse-arrow join-item">
                                     <input type="radio" name="my-accordion-4" />
-                                    <div className="collapse-title text-xl font-medium text-blueCustom">
+                                    <div className="text-xl font-medium collapse-title text-blueCustom">
                                         Valores
                                     </div>
                                     <div className="collapse-content">
@@ -147,21 +147,30 @@ export const HomeView = () => {
 
 
             <section className="section" id="courses">
-                <motion.div>
+                <motion.div
+                    initial={{ opacity: 0, }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 1, ease: 'easeIn' }}
+                    viewport={{ once: true }}
+                >
 
-                    <h2 className="text-navy text-center mb-10">
+                    <h2 className="mb-10 text-center text-navy">
                         Talleres
                     </h2>
                 </motion.div>
 
 
 
-                <article className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <article className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
                     {
                         courses.map((course, index) => {
                             return (
                                 <motion.div
                                     key={index}
+                                    initial={{ opacity: 0, }}
+                                    whileInView={{ opacity: 1 }}
+                                    transition={{ duration: 1, ease: 'easeIn' }}
+                                    viewport={{ once: true }}
                                 >
                                     <CardCourse
 
@@ -177,23 +186,41 @@ export const HomeView = () => {
             </section>
 
             <section className="section" id="contact">
-                <h2 className="text-navy text-center mb-10">
-                    Contactanos
-                </h2>
+                <motion.div
+                    key={index}
+                    initial={{ opacity: 0, }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 1, ease: 'easeIn' }}
+                    viewport={{ once: true }}
+                >
+                    <h2 className="mb-10 text-center text-navy">
+                        Contactanos
+                    </h2>
+                </motion.div>
 
 
-                <article className="grid lg:grid-cols-2 gap-4">
+
+                <article className="grid gap-4 lg:grid-cols-2">
 
                     <div>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d933.361121548013!2d-98.65224279784425!3d20.65148803213503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d12531b05c7613%3A0x899ddebce2ce7de!2sC.%20Margarita%20Maza%20de%20Ju%C3%A1rez%2C%2043204%20Zacualtip%C3%A1n%2C%20Hgo.!5e0!3m2!1ses!2smx!4v1707417625015!5m2!1ses!2smx"
-                            className="block w-full h-[400px]"
-                            style={{ border: 0 }}
-                            allowFullScreen
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                            onLoad={handleMapLoad}
-                        />
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 1, ease: 'easeIn' }}
+                            viewport={{ once: true }}
+                        >
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d933.361121548013!2d-98.65224279784425!3d20.65148803213503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d12531b05c7613%3A0x899ddebce2ce7de!2sC.%20Margarita%20Maza%20de%20Ju%C3%A1rez%2C%2043204%20Zacualtip%C3%A1n%2C%20Hgo.!5e0!3m2!1ses!2smx!4v1707417625015!5m2!1ses!2smx"
+                                className="block w-full h-[400px]"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                onLoad={handleMapLoad}
+                            />
+                        </motion.div>
+
 
                         {
                             isLoadMapGoogle ?
@@ -207,14 +234,19 @@ export const HomeView = () => {
                     </div>
 
 
-                    <motion.div>
-                        <div className="bg-white rounded-3xl p-8 flex flex-col justify-center">
+                    <motion.div
+                        initial={{ opacity: 0, }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 1, ease: 'easeIn' }}
+                        viewport={{ once: true }}
+                    >
+                        <div className="flex flex-col justify-center p-8 bg-white rounded-3xl">
 
                             <ul>
                                 <li className="py-2">
 
                                     <p className="">
-                                        <IconMapPin className="text-blackCustom inline mr-2" />
+                                        <IconMapPin className="inline mr-2 text-blackCustom" />
                                         <span className="font-bold">Ubicacion:{" "}</span> C. Margarita Maza de Juárez, Poza de Chapultepec, 43200 Zacualtipán, Hgo.
                                     </p>
 
@@ -222,28 +254,32 @@ export const HomeView = () => {
 
                                 </li>
                                 <li className="py-2">
-                                    <a className="flex gap-2 items-center" href="tel:+1234567890" target="_blank">
+                                    <a className="flex items-center gap-2" href="tel:+1234567890" target="_blank">
                                         <IconPhone className="text-red-600" />
                                         771 271 0797
 
                                     </a>
                                 </li>
                                 <li className="py-2">
-                                    <a className="flex gap-2 items-center" href="tel:+1234567890" target="_blank">
+                                    <a
+                                        className="flex items-center gap-2"
+                                        href="https://wa.me/7712710797"
+                                        target="_blank"
+                                    >
                                         <IconBrandWhatsapp className="text-green-500" />
                                         771 271 0797
 
                                     </a>
                                 </li>
                                 <li >
-                                    <a className="flex gap-2 items-center" href="mailto:lariosacostaa@gmail.com" target="_blank">
+                                    <a className="flex items-center gap-2" href="mailto:lariosacostaa@gmail.com" target="_blank">
                                         <IconMail className="text-yellow-400" />
                                         lariosacostaa@gmail.com
 
                                     </a>
                                 </li>
                                 <li className="py-2">
-                                    <a className="flex gap-2 items-center" href="" target="_blank">
+                                    <a className="flex items-center gap-2" href="" target="_blank">
                                         <IconBrandFacebook className="text-blue-700" />
                                         Colegio Bartolome de Medina
 
@@ -258,9 +294,14 @@ export const HomeView = () => {
             </section>
 
             <section className="section" id="gallery">
-                <motion.div>
+                <motion.div
+                    initial={{ opacity: 0, }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 1, ease: 'easeIn' }}
+                    viewport={{ once: true }}
+                >
 
-                    <h2 className="text-navy text-center mb-10">
+                    <h2 className="mb-10 text-center text-navy">
                         Galería
                     </h2>
                 </motion.div>
@@ -268,14 +309,19 @@ export const HomeView = () => {
 
 
 
-                <motion.div>
+                <motion.div
+                    initial={{ opacity: 0, }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 1, ease: 'easeIn' }}
+                    viewport={{ once: true }}
+                >
                     <div className="container mx-auto ">
-                        <div className="-m-1 flex flex-wrap md:-m-2">
-                            <div className="flex w-1/2 flex-wrap">
+                        <div className="flex flex-wrap -m-1 md:-m-2">
+                            <div className="flex flex-wrap w-1/2">
                                 <div className="w-1/2 p-1 md:p-2">
                                     <img
                                         alt="gallery"
-                                        className="block h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        className="block object-cover object-center w-full h-full rounded-lg cursor-pointer"
                                         src={photos[0].src}
                                         onClick={() => setIndex(0)}
                                     />
@@ -283,7 +329,7 @@ export const HomeView = () => {
                                 <div className="w-1/2 p-1 md:p-2">
                                     <img
                                         alt="gallery"
-                                        className="block h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        className="block object-cover object-center w-full h-full rounded-lg cursor-pointer"
                                         src={photos[1].src}
                                         onClick={() => setIndex(1)}
                                     />
@@ -291,17 +337,17 @@ export const HomeView = () => {
                                 <div className="w-full p-1 md:p-2">
                                     <img
                                         alt="gallery"
-                                        className="block h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        className="block object-cover object-center w-full h-full rounded-lg cursor-pointer"
                                         src={photos[2].src}
                                         onClick={() => setIndex(2)}
                                     />
                                 </div>
                             </div>
-                            <div className="flex w-1/2 flex-wrap">
+                            <div className="flex flex-wrap w-1/2">
                                 <div className="w-full p-1 md:p-2">
                                     <img
                                         alt="gallery"
-                                        className="block h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        className="block object-cover object-center w-full h-full rounded-lg cursor-pointer"
                                         src={photos[3].src}
                                         onClick={() => setIndex(3)}
                                     />
@@ -309,7 +355,7 @@ export const HomeView = () => {
                                 <div className="w-1/2 p-1 md:p-2">
                                     <img
                                         alt="gallery"
-                                        className="block h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        className="block object-cover object-center w-full h-full rounded-lg cursor-pointer"
                                         src={photos[4].src}
                                         onClick={() => setIndex(4)}
                                     />
@@ -317,7 +363,7 @@ export const HomeView = () => {
                                 <div className="w-1/2 p-1 md:p-2">
                                     <img
                                         alt="gallery"
-                                        className="block h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                                        className="block object-cover object-center w-full h-full rounded-lg cursor-pointer"
                                         src={photos[5].src}
                                         onClick={() => setIndex(5)}
                                     />
