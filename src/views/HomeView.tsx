@@ -169,22 +169,20 @@ export const HomeView = () => {
                 <h2>
                     avisos
                 </h2>
-                {/* 
-                <div style={{ display: 'flex', justifyContent: 'center' }}>
-                    <FacebookEmbed url="https://www.facebook.com/permalink.php?story_fbid=122097894338225935&amp;id=61556778058490" width={550} />
-                </div> */}
+
                 {
-                    posts.map(post => {
-                        console.log(`${url_page}/${post?.id}`)
+                    posts.map((post) => {
                         return (
-                            <FacebookEmbed
-                                key={post?.id}
-                                url={`${url_facebook}/${post?.id}`}
-                                width={550}
-                            />
+                            <>
+                                <FacebookEmbed
+                                    url={`https://www.facebook.com/permalink.php?story_fbid=${post.id}&amp;id=61556778058490`}
+                                    width={550}
+                                />
+                            </>
                         )
                     })
                 }
+
 
 
 
