@@ -19,7 +19,9 @@ export interface Cursors {
 }
 
 export const getPostsPage = async () => {
-    const response = await fetch("https://graph.facebook.com/v19.0/246471728550678/feed?access_token=EAAGZCUDWyeuoBO5DTlBOVnv7Coa0EoK4Imv9N7TAasPSZBZADSOzUINaepIKsNlUpBYuzqL0gs2ISJZBAnrNmUCiZAVTXZC0w8GmLEw9q8tfRmCf5B5eIZBtp3zLXmBbDVEKczChWRztFeQT8RQqFTtKy27EU0EfPsUMRR2SAupZB85zceuXIE6sv2kZCLV4ZCpVPfxzVLFsNIZBy1xfd8sYP3PFaEZD");
+    const response = await fetch("https://graph.facebook.com/v19.0/246471728550678/feed?access_token=EAAGZCUDWyeuoBO1T6QpU78L2u6P5epVI9rZAFi4fTdAAZARzZAtiZB8LFd6GEzSpRng84u8CI8ZB5VGKS5ohXWs5I3aj2pWZApN2yqJa2vkoLvT7MfZCylCooprSjTMaa7xvUzXGamPMzoVNCkGDvdjvL54pyX7vGV2ZCvOGkGfDXCwYalDUxhUviOLEeZBuMx2XZC1NyVD17qGAisxC69zhVBZA34UZD");
+
+
 
 
 

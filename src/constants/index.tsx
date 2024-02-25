@@ -16,6 +16,10 @@ export const navLinks: INavLink[] = [
     title: 'Sobre Nosotros'
   },
   {
+    id: '#notices',
+    title: 'Avisos'
+  },
+  {
     id: '#courses',
     title: 'Talleres'
   },

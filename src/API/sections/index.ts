@@ -1,0 +1,6 @@
+export * from './MainSection.tsx'
+export * from './AboutUsSection.tsx'
+export * from './NoticesFacebook.tsx'
+export * from './CoursesSection.tsx'
+export * from './ContactSection.tsx'
+export * from './GallerySection.tsx'
