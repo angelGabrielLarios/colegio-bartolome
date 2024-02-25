@@ -6,7 +6,7 @@ import { IconPhone, IconMail, IconBrandWhatsapp, IconBrandFacebook, IconMapPin }
 import Lightbox, { SlideImage } from "yet-another-react-lightbox";
 import { FacebookEmbed } from "react-social-media-embed";
 import { Datum, getPostsPage } from "../API/functions/getPostsPage";
-import { url_facebook, url_page } from "../API/urls";
+
 
 
 export const HomeView = () => {
