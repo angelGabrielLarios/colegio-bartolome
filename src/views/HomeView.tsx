@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CardCourse } from "../components";
 import { courses } from "../constants";
 import { motion } from 'framer-motion'
-
 import { IconPhone, IconMail, IconBrandWhatsapp, IconBrandFacebook, IconMapPin } from '@tabler/icons-react'
 import Lightbox, { SlideImage } from "yet-another-react-lightbox";
-
+import { FacebookEmbed } from "react-social-media-embed";
+import { Datum, getPostsPage } from "../API/functions/getPostsPage";
+import { url_facebook, url_page } from "../API/urls";
 
 
 export const HomeView = () => {
@@ -17,6 +18,22 @@ export const HomeView = () => {
     const handleMapLoad = () => {
         setIsLoadMapGoogle(false)
     };
+
+    const [posts, setPosts] = useState<Datum[]>([])
+
+    useEffect(() => {
+        (async () => {
+            try {
+
+                const { data } = await getPostsPage()
+                console.log(data, 'hola')
+                setPosts(data ?? [])
+            } catch (error) {
+                console.error(error)
+            }
+
+        })();
+    }, [])
 
 
     const photos: SlideImage[] = [
@@ -142,6 +159,34 @@ export const HomeView = () => {
 
                     </section>
                 </article>
+
+            </section>
+
+            <section
+                className="section"
+            >
+
+                <h2>
+                    avisos
+                </h2>
+                {/* 
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <FacebookEmbed url="https://www.facebook.com/permalink.php?story_fbid=122097894338225935&amp;id=61556778058490" width={550} />
+                </div> */}
+                {
+                    posts.map(post => {
+                        console.log(`${url_page}/${post?.id}`)
+                        return (
+                            <FacebookEmbed
+                                key={post?.id}
+                                url={`${url_facebook}/${post?.id}`}
+                                width={550}
+                            />
+                        )
+                    })
+                }
+
+
 
             </section>
 

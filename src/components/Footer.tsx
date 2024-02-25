@@ -17,6 +17,7 @@ export const Footer = () => {
             {navLinks.map((navlink) => {
               return (
                 <a
+                  key={navlink.title}
                   className="link link-hover"
                   href={navlink.id}
                 >{navlink.title}</a>

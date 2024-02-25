@@ -13,22 +13,21 @@ export const Navbar = () => {
 
 
             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li>
-                {navLinks.map(navlink => {
-                  return (
-                    <li>
-                      <a
-                        href={navlink.id}
-                        className=""
-                      >
-                        {navlink.title}
-                      </a>
-                    </li>
+              {navLinks.map(navlink => {
+                return (
+                  <li
+                    key={navlink.title}
+                  >
+                    <a
+                      href={navlink.id}
+                      className=""
+                    >
+                      {navlink.title}
+                    </a>
+                  </li>
 
-                  )
-                })}
-              </li>
-
+                )
+              })}
             </ul>
           </div>
 
