@@ -172,10 +172,11 @@ export const HomeView = () => {
 
                 {
                     posts.map((post) => {
+                        console.log(post)
                         return (
                             <>
                                 <FacebookEmbed
-                                    url={`https://www.facebook.com/permalink.php?story_fbid=${post.id}&amp;id=61556778058490`}
+                                    url={`https://www.facebook.com/permalink.php?story_fbid=122099319872225935&amp;id=61556778058490`}
                                     width={550}
                                 />
                             </>
