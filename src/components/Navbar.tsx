@@ -1,17 +1,34 @@
-import { useState } from "react";
-import { navLinks } from "../constants";
+import { useEffect, useState } from "react"
+import { navLinks } from "../constants"
 
 
 export const Navbar = () => {
-  const [loading, setLoading] = useState(true);
-
+  const [loading, setLoading] = useState(true)
 
   const handleImageLoaded = () => {
-    setLoading(false);
+    setLoading(false)
   };
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 0; // Cambia esto si quieres un punto específico para el 
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <nav className="navbar bg-base-100">
+      <nav
+        className={`fixed navbar transition-colors ease-in duration-300 z-10  ${scrolled ? 'bg-white' : 'bg-whiteCustom'}`}
+      >
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,7 +44,7 @@ export const Navbar = () => {
                   >
                     <a
                       href={navlink.id}
-                      className=""
+                      className="font-montserrat"
                     >
                       {navlink.title}
                     </a>
@@ -38,7 +55,7 @@ export const Navbar = () => {
             </ul>
           </div>
 
-          <a className="text-xl btn btn-ghost" href="/">
+          <a className="block text-xl btn btn-ghost" href="/">
             {loading && <span className="loading loading-ball loading-md"></span>}
 
 
@@ -46,7 +63,7 @@ export const Navbar = () => {
             <img
               src="/images/logo_bartolome_de_medina-bg.webp"
               alt="logo del Colegio Bartolomé de Medina"
-              className="block w-14"
+              className="block w-10"
               onLoad={handleImageLoaded}
             />
 
@@ -65,7 +82,7 @@ export const Navbar = () => {
                 >
                   <a
                     href={navlink.id}
-                    className=""
+                    className="font-montserrat"
                   >
                     {navlink.title}
                   </a>
@@ -75,7 +92,7 @@ export const Navbar = () => {
           </ul>
         </div>
 
-      </nav>
+      </nav >
     </>
   )
 };
