@@ -1,14 +1,22 @@
+import { useState } from "react";
 import { ShowAnimantion } from "../../components"
 
 
 export const MainSection = () => {
+    const [loading, setLoading] = useState(true);
+
+
+    const handleImageLoaded = () => {
+        setLoading(false);
+    };
     return (
         <>
-            <main id="home" className={`section min-h-screen`}>
+            <main id="home" className={`section main-section flex items-center justify-center`}>
 
 
                 <article className="space-y-5 text-center">
 
+                    {loading && <span className="loading loading-ball loading-md"></span>}
 
                     <ShowAnimantion>
 
@@ -16,8 +24,11 @@ export const MainSection = () => {
                             src="/images/logo_bartolome_de_medina-bg.webp"
                             alt="logo del Colegio Bartolomé de Medina"
                             className="block mx-auto animate-fade-right animate-duration-[2000ms]  w-20 md:w-[10rem]"
+                            onLoad={handleImageLoaded}
                         />
                     </ShowAnimantion>
+
+
 
                     <ShowAnimantion>
                         <h1 className="text-3xl md:text-4xl lg:text-6xl lg:py-2 text-gradient animate-fade-right animate-duration-[2000ms] ">

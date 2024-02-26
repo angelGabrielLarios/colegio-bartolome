@@ -1,7 +1,14 @@
+import { useState } from "react";
 import { navLinks } from "../constants";
 
-export const Navbar = () => {
 
+export const Navbar = () => {
+  const [loading, setLoading] = useState(true);
+
+
+  const handleImageLoaded = () => {
+    setLoading(false);
+  };
   return (
     <>
       <nav className="navbar bg-base-100">
@@ -32,11 +39,18 @@ export const Navbar = () => {
           </div>
 
           <a className="text-xl btn btn-ghost" href="/">
+            {loading && <span className="loading loading-ball loading-md"></span>}
+
+
+
             <img
               src="/images/logo_bartolome_de_medina-bg.webp"
-              alt="logo de colegio bartolome de medina "
+              alt="logo del Colegio Bartolomé de Medina"
               className="block w-14"
+              onLoad={handleImageLoaded}
             />
+
+
           </a>
 
         </div>

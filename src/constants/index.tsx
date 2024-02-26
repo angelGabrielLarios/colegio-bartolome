@@ -24,6 +24,10 @@ export const navLinks: INavLink[] = [
     title: 'Talleres'
   },
   {
+    id: '#installations',
+    title: 'Instalaciones'
+  },
+  {
     id: '#contact',
     title: 'Contactanos'
   },

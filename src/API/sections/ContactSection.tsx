@@ -67,7 +67,7 @@ export const ContactSection = () => {
 
                                 </li>
                                 <li className="py-2">
-                                    <a className="flex items-center gap-2" href="tel:+1234567890" target="_blank">
+                                    <a className="flex items-center gap-2" href="tel:+527712710797" target="_blank">
                                         <IconPhone className="text-red-600" />
                                         771 271 0797
 

@@ -18,7 +18,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-montserrat font-bold;
+  @apply font-bold font-montserrat;
 }
 
 h2 {
@@ -31,6 +31,10 @@ h2 {
 
 .card:hover .card-body {
   @apply text-redCustom
+}
+
+.main-section {
+  height: calc(100vh - 68px) !important;
 }
 
 /* :root {
@@ -54,7 +58,7 @@ h2 {
 
 @layer components {
   .text-gradient {
-    @apply bg-gradient-to-r from-blueCustom to-redCustom text-transparent bg-clip-text;
+    @apply text-transparent bg-gradient-to-r from-blueCustom to-redCustom bg-clip-text;
   }
 
   .section {

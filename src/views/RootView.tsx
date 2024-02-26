@@ -1,4 +1,4 @@
-import { AboutUsSection, ContactSection, GallerySection, MainSection, NoticesFacebook } from "../API/sections";
+import { AboutUsSection, ContactSection, CoursesSection, GallerySection, InstallationsSection, MainSection, NoticesFacebook, RegistrationsSections } from "../API/sections";
 
 
 
@@ -11,6 +11,9 @@ export const RootView = () => {
             <MainSection />
             <AboutUsSection />
             <NoticesFacebook />
+            <CoursesSection />
+            <InstallationsSection />
+            <RegistrationsSections />
             <ContactSection />
             <GallerySection />
 

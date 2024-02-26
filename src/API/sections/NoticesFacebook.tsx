@@ -13,8 +13,10 @@ export const NoticesFacebook = () => {
 
                 const { data } = await getPostsPage()
                 console.log(data)
-                setPosts(data)
+                setPosts(data ?? [])
+
             } catch (error) {
+                setPosts([])
                 console.error(error)
             }
 
@@ -33,25 +35,30 @@ export const NoticesFacebook = () => {
                     Avisos
                 </h2>
 
-                {
-                    posts.map((post) => {
-                        const copyPostId = post.id
-                        const postIdForEmbed = copyPostId.split("_")[1]
-                        return (
-                            <>
-                                <ShowAnimantion
-                                    key={post.id}
-                                >
-                                    <FacebookEmbed
 
-                                        url={`https://www.facebook.com/20531316728/posts/${postIdForEmbed}`}
-                                        width={550}
-                                    />
-                                </ShowAnimantion>
-                            </>
-                        )
-                    })
-                }
+                <article className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                    {
+                        !posts.length
+                            ? <p>Cargando</p>
+                            : posts.map((post) => {
+                                const copyPostId = post.id
+                                const postIdForEmbed = copyPostId.split("_")[1]
+                                return (
+                                    <>
+                                        <ShowAnimantion
+                                            key={post.id}
+                                        >
+                                            <FacebookEmbed
+
+                                                url={`https://www.facebook.com/20531316728/posts/${postIdForEmbed}`}
+                                            />
+                                        </ShowAnimantion>
+                                    </>
+                                )
+                            })
+                    }
+                </article>
+
 
 
 
