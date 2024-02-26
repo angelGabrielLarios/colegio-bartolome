@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Lightbox, { SlideImage } from "yet-another-react-lightbox";
-import { motion } from "framer-motion";
+import { ShowAnimantion } from "../../components";
 
 export const GallerySection = () => {
 
@@ -16,27 +16,14 @@ export const GallerySection = () => {
     ];
     return (
         <section className="section" id="gallery">
-            <motion.div
-                initial={{ opacity: 0, }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 1, ease: 'easeIn' }}
-                viewport={{ once: true }}
-            >
 
+            <ShowAnimantion>
                 <h2 className="mb-10 text-center text-navy">
                     Galería
                 </h2>
-            </motion.div>
+            </ShowAnimantion>
 
-
-
-
-            <motion.div
-                initial={{ opacity: 0, }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 1, ease: 'easeIn' }}
-                viewport={{ once: true }}
-            >
+            <ShowAnimantion>
                 <div className="container mx-auto ">
                     <div className="flex flex-wrap -m-1 md:-m-2">
                         <div className="flex flex-wrap w-1/2">
@@ -93,11 +80,7 @@ export const GallerySection = () => {
                         </div>
                     </div>
                 </div>
-
-            </motion.div>
-
-
-
+            </ShowAnimantion>
 
             <Lightbox
                 index={index}
@@ -105,9 +88,6 @@ export const GallerySection = () => {
                 open={index >= 0}
                 close={() => setIndex(-1)}
             />
-
-
-
 
 
         </section>

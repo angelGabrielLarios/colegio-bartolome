@@ -14,7 +14,7 @@ export const RegistrationsSections = () => {
 
 
                 <ShowAnimantion>
-                    <h3 className="mb-10 text-2xl text-center text-redCustom">
+                    <h3 className="mb-10 text-lg text-center md:text-2xl text-redCustom">
                         ¿Qué papeles necesito para inscribirme?
                     </h3>
                 </ShowAnimantion>
@@ -23,7 +23,7 @@ export const RegistrationsSections = () => {
 
                 <ShowAnimantion>
                     <article className="w-full mx-auto md:w-[40rem] bg-white rounded-xl p-6">
-                        <ul>
+                        <ul className="text-sm md:text-base">
                             <li className="py-2">Solicitud de ingreso</li>
                             <li className="py-2">Copia de Acta de nacimiento</li>
                             <li className="py-2">Copia de comprobante de domicilio</li>

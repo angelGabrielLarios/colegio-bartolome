@@ -1,15 +1,11 @@
 import { navLinks } from "../constants";
-import { motion } from 'framer-motion'
+import { ShowAnimantion } from "./ShowAnimantion";
 
 export const Footer = () => {
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0, }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1, ease: 'easeIn' }}
-        viewport={{ once: true }}
-      >
+
+      <ShowAnimantion>
         <footer
           className="p-10 footer footer-center bg-gradient-to-r from-navy to-blueCustom text-whiteCustom"
         >
@@ -36,7 +32,10 @@ export const Footer = () => {
             </p>
           </aside>
         </footer>
-      </motion.div>
+      </ShowAnimantion>
+
+
+
     </>
   )
 }

@@ -38,7 +38,7 @@ export const AboutUsSection = () => {
                                         Misión <IconTargetArrow />
                                     </div>
                                     <div className="collapse-content">
-                                        <p>
+                                        <p className="text-sm md:text-base">
                                             Nuestra misión en el Colegio es proporcionar una educación de calidad que inspire a nuestros estudiantes a alcanzar su máximo potencial académico, personal y social. Nos comprometemos a crear un ambiente de aprendizaje seguro, inclusivo y estimulante donde cada niño se sienta valorado y apoyado en su viaje educativo. Buscamos fomentar el desarrollo integral de nuestros estudiantes, promoviendo la excelencia académica, el liderazgo, la creatividad y el respeto por los demás y por el mundo que nos rodea.
                                         </p>
                                     </div>
@@ -50,7 +50,7 @@ export const AboutUsSection = () => {
                                         Visión <IconEye />
                                     </div>
                                     <div className="collapse-content">
-                                        <p>
+                                        <p className="text-sm md:text-base">
 
                                             Nuestra visión en el Colegio es ser reconocidos como una institución líder en la educación, donde los estudiantes se conviertan en ciudadanos globales comprometidos, capaces de enfrentar los desafíos del siglo XXI con confianza, empatía y resiliencia. Nos esforzamos por cultivar un entorno de aprendizaje innovador y colaborativo que fomente la curiosidad, el pensamiento crítico y el amor por el aprendizaje a lo largo de toda la vida.
                                         </p>
@@ -63,7 +63,7 @@ export const AboutUsSection = () => {
                                         Valores <IconHeartHandshake />
                                     </div>
                                     <div className="collapse-content">
-                                        <p>
+                                        <p className="text-sm md:text-base">
                                             Excelencia, Integridad, Inclusión, Colaboración y Resiliencia
                                         </p>
                                     </div>

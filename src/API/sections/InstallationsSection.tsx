@@ -11,10 +11,10 @@ export const InstallationsSection = () => {
                     </h2>
                 </ShowAnimantion>
 
-                <article className="flex items-stretch gap-4">
+                <article className="space-y-2 md:flex md:items-stretch md:gap-4">
 
                     <div className="p-6 bg-white rounded-xl  md:basis-[400px] flex flex-col justify-center">
-                        <ul>
+                        <ul className="text-sm md:text-base">
                             <li className="flex items-center gap-2">
                                 <IconChalkboard /> 4 salones
                             </li>

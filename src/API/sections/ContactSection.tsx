@@ -55,7 +55,7 @@ export const ContactSection = () => {
                     <ShowAnimantion>
                         <div className="flex flex-col justify-center p-8 bg-white rounded-3xl">
 
-                            <ul>
+                            <ul className='text-sm md:text-base'>
                                 <li className="py-2">
 
                                     <p className="">
